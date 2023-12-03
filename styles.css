@@ -1,0 +1,317 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-color: #ebebeb;
+    padding: 10px;
+    border-bottom: 3px solid #333;
+}
+
+.logo img {
+    height: 80px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    background-color: #555;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffcc00;
+}
+
+main {
+    padding: 20px;
+}
+
+.promotion {
+    position: relative;
+    text-align: center;
+    background-color: #ffcc00;
+    padding: 20px;
+    color: #333;
+    border-radius: 15px;
+}
+
+.promotion img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Center the image */
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.promotion h1,
+.promotion p {
+    color: #333;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.column {
+    flex: 0 0 calc(30% - 20px); /* Adjusted width with margin */
+    text-align: center;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+    background-color: bisque;
+}
+
+.column:hover {
+    transform: scale(1.15);
+}
+
+.column img {
+    max-width: 100%; /* Ensure product images don't exceed their container */
+    height: auto;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-left img {
+    height: 40px;
+}
+
+@media only screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    nav li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .column {
+        flex: 0 0 100%;
+    }
+
+    header {
+        padding: 5px;
+    }
+
+    .logo img {
+        height: 60px;
+    }
+
+    nav ul {
+        padding: 10px;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    body {
+        font-size: 14px;
+    }
+
+    nav li {
+        font-size: 14px;
+    }
+
+    main {
+        padding: 15px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    nav ul {
+        padding: 5px;
+    }
+
+    .promotion {
+        padding: 15px;
+    }
+
+    .column {
+        flex: 0 0 100%;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-left img {
+        height: 30px;
+    }
+}
+
+
+/* Additional styles for the Menu page */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-section {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column; /* Updated to column layout */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text within items */
+}
+
+.menu-item {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 0 0 calc(30% - 20px);
+    box-sizing: border-box;
+}
+
+.menu-item h3 {
+    color: #333;
+}
+
+.menu-item p {
+    color: #666;
+}
+
+/* Adjustments for larger screens */
+@media only screen and (min-width: 769px) {
+    .menu-item {
+        flex: 0 0 calc(30% - 20px);
+        margin-bottom: 20px;
+    }
+}
+
+
+/* Additional styles for the About Us page */
+main {
+    padding: 20px;
+}
+
+.about-section {
+    margin-top: 40px;
+}
+
+.about-section h1 {
+    background-color: #ffcc00; /* Yellow background color */
+    padding: 10px; /* Adjust padding as needed */
+    border-radius: 10px; /* Border radius */
+    color: #333; /* Text color */
+    margin-bottom: 20px; /* Add margin to separate from content */
+}
+
+.about-section p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* Responsive adjustments */
+@media only screen and (min-width: 769px) {
+    .about-section h1 {
+        margin-bottom: 30px; /* Adjust margin for larger screens */
+    }
+
+    .about-section p {
+        font-size: 16px; /* Adjust font size for larger screens */
+    }
+}
+
+/* Additional styles for the Contact page */
+main {
+    padding: 20px;
+}
+
+.contact-section {
+    margin-top: 40px;
+}
+
+.contact-section h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contact-details p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.social-buttons {
+    margin-bottom: 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #555;
+    border-radius: 5px;
+}
+
+.insta-button {
+    background-color: #bc2a8d; /* Instagram color */
+}
+
+.fb-button {
+    background-color: #1877f2; /* Facebook color */
+}
+
+/* Responsive adjustments */
+@media only screen and (min-width: 769px) {
+    .contact-section h1 {
+        margin-bottom: 30px;
+    }
+
+    .contact-details p {
+        font-size: 16px;
+    }
+
+    .button {
+        font-size: 14px;
+    }
+}
+
